@@ -2,5 +2,7 @@ description: The ChatGPTJailbreakFinder component is responsible for finding the
   jailbreaks and sorting them by their effectiveness. This component will access a
   Google Sheet using a provided Google API key, update the sheet with the relevant
   jailbreak information, and return the updated Google Sheet ID.
+input-class: ChatGPTJailbreakFinderIn
 name: ChatGPTJailbreakFinder
+output-class: ChatGPTJailbreakFinderOut
 parameters: {}
