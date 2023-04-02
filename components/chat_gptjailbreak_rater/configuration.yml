@@ -2,5 +2,7 @@ description: Loads each prompt from the JailbreakScraper component into a fresh 
   of ChatGPT and asks ChatGPT if it would do anything unethical. If it answers affirmatively,
   that would be a good jailbreak. Outputs a list of jailbreaks and their corresponding
   rating (either 'good' or 'bad'). Takes input from JailbreakScraper.
+input-class: ChatGPTJailbreakRaterInputDict
 name: ChatGPTJailbreakRater
+output-class: ChatGPTJailbreakRaterOutputDict
 parameters: {}
