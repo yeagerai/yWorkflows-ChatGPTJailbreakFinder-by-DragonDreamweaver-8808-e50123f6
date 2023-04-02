@@ -1,0 +1,28 @@
+yaml
+components:
+    node-0:
+        class: JailbreakScraper
+        module-path: components/jailbreak_scraper/jailbreak_scraper.py
+        configuration: !include components/jailbreak_scraper/configuration.yml
+    node-1:
+        class: ChatGPTJailbreakRater
+        module-path: components/chatgpt_jailbreak_rater/chatgpt_jailbreak_rater.py
+        configuration: !include components/chatgpt_jailbreak_rater/configuration.yml
+
+    node-2:
+        class: GoogleSheetUpdater
+        module-path: components/google_sheet_updater/google_sheet_updater.py
+        configuration: !include components/google_sheet_updater/configuration.yml
+
+flow-matrix:
+    [
+        [0, 1, 0],
+        [0, 0, 1],
+        [0, 0, 0],
+    ]
+
+mapper:
+    node-1.ChatGPTJailbreakRater.prompts: node-0.JailbreakScraper.top10Prompts
+
+    node-2.GoogleSheetUpdater.jailbreaks: node-1.ChatGPTJailbreakRater.ratedJailbreaks
+    node-2.GoogleSheetUpdater.api_key: input.GoogleApiKey
