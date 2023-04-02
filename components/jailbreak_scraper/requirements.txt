@@ -1,0 +1,9 @@
+
+os==0.1.5
+yaml==0.2.5
+requests==2.25.1
+beautifulsoup4==4.9.3
+typing==3.7.4.3
+python-dotenv==0.15.0
+fastapi==0.65.1
+pydantic==1.8.2
