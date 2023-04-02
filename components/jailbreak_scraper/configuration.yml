@@ -1,5 +1,7 @@
 description: Accesses the website https://www.jailbreakchat.com/, filters the list
   by JB score, and parses the top 10 prompts. Outputs the list of top 10 prompts and
   their JB scores.
+input-class: JailbreakScraperInputDict
 name: JailbreakScraper
+output-class: JailbreakScraperOutputDict
 parameters: {}
