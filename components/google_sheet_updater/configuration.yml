@@ -1,0 +1,7 @@
+description: Orders the jailbreaks from the ChatGPTJailbreakRater component on a Google
+  Sheet, and ensures the Google Sheet is updated with the best-rated jailbreaks every
+  hour. Outputs the updated Google Sheet ID. Takes input from ChatGPTJailbreakRater.
+name: GoogleSheetUpdater
+parameters:
+  googleSheetId: Insert your Google Sheet ID here
+  updateFrequency: 1
